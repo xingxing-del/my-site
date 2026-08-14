@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <title>李立浩 - 把 AI 能力做成可用产品的人</title>
+  <meta name="description" content="李立浩的个人网站。三年 AI 产品实践，持续拆解产品逻辑、真实需求与商业机会，关注如何把 AI 能力做成真正可用的产品。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#171917;--green:#1c2e1e;--muted:#5a635a;--line:#eaece9;--paper:#fff;--soft:#fafbf9;--max:1280px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"PingFang SC","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}::selection{background:#eaece9;color:#1c2e1e}a{color:inherit;text-decoration:none}button{font:inherit}.container{width:min(calc(100% - 48px),var(--max));margin:auto}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}.animate-blink{animation:blink 1s step-end infinite}
+    .header{position:fixed;inset:0 0 auto;z-index:30;padding:18px 32px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;background:transparent}.logo{display:flex;align-items:center;gap:12px;font-size:26px;font-weight:500;letter-spacing:-.04em}.asterisk{font-size:30px;line-height:1;margin-bottom:4px}.nav{display:flex;align-items:center;font-size:23px;letter-spacing:-.03em}.nav a,.contact-link{transition:opacity .2s}.nav a:hover,.contact-link:hover{opacity:.6}.divider{opacity:.4}.contact-link{justify-self:end;font-size:23px;text-decoration:underline;text-underline-offset:3px}.menu{display:none;border:0;background:none;padding:8px;cursor:pointer}.menu span{display:block;width:24px;height:2px;margin:5px 0;background:#000;transition:.3s}.menu.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}.menu.open span:nth-child(2){opacity:0}.menu.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}.mobile-nav{position:fixed;inset:0;z-index:20;display:none;align-items:center;justify-content:center;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);opacity:0;pointer-events:none;transition:.3s}.mobile-nav.open{opacity:1;pointer-events:auto}.mobile-nav div{display:flex;flex-direction:column;gap:24px;text-align:center;font-size:34px}
+    .hero{position:relative;min-height:100vh;display:flex;flex-direction:column;overflow:hidden}.video-wrap{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;background:#f5f5f3}.video-wrap video{width:100%;height:100%;object-fit:cover;object-position:right bottom}.hero-layer{position:relative;z-index:10;min-height:100vh;display:flex;flex-direction:column;background:transparent}.hero-main{width:100%;max-width:1280px;margin:auto;padding:116px 24px 60px;flex:1;display:flex;flex-direction:column;justify-content:center}.hero-content{width:min(610px,52%)}.headline{min-height:165px;margin:0 0 28px;font-size:clamp(54px,5.8vw,76px);font-weight:400;line-height:1.08;letter-spacing:-.055em;white-space:pre-wrap;user-select:none}.cursor{display:inline-block;width:2px;height:1.1em;margin-left:2px;vertical-align:middle;background:#000}.description{max-width:650px;margin:0 0 48px;color:#5a635a;font-size:20px;line-height:1.7}.service-title{margin:0 0 8px;font-size:24px;font-weight:500;letter-spacing:-.03em}.service-subtitle{margin:0 0 28px;color:#738273;opacity:.85}.pills{display:flex;flex-wrap:wrap;gap:10px}.pill{min-height:46px;padding:0 18px;border:1px solid #f1f3f1;border-radius:999px;background:#fff;color:#1c2e1e;cursor:pointer;transition:.22s}.pill:hover{background:rgba(241,243,241,.55)}.pill.active{color:#fff;background:#1c2e1e;box-shadow:0 8px 18px rgba(28,46,30,.08);transform:translateY(-1px)}.check{display:none;margin-right:7px}.pill.active .check{display:inline}.feedback{min-height:65px;margin-top:18px}.placeholder{padding:10px 2px;color:#1c2e1e;opacity:.5;font-size:12px;font-style:italic}.ready{display:none;max-width:590px;padding:16px 18px;border:1px solid #e7eae6;border-radius:16px;background:#fafbf9;align-items:center;justify-content:space-between;gap:16px;font-size:13px}.ready.show{display:flex}.ready button{border:0;background:none;color:#4d6d47;font-size:12px;text-transform:uppercase;cursor:pointer}
+    .drop{opacity:0;transform:translateY(20px);animation:drop .6s ease forwards}.drop.delay{animation-delay:.1s}@keyframes drop{to{opacity:1;transform:none}}.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
+    .section{padding:130px 0;border-top:1px solid var(--line)}.section-head{display:grid;grid-template-columns:1fr 2fr;gap:32px;margin-bottom:70px}.kicker{margin:7px 0 0;color:#738273;font-size:12px;text-transform:uppercase;letter-spacing:.12em}.section h2{max-width:800px;margin:0;font-size:clamp(40px,5vw,68px);font-weight:400;line-height:1.08;letter-spacing:-.055em}.thoughts{border-top:1px solid var(--line)}.thought{display:grid;grid-template-columns:90px 150px 1fr auto;gap:20px;align-items:center;padding:27px 0;border-bottom:1px solid var(--line);transition:padding .25s,background .25s}.thought:hover{padding-left:10px;background:#fafbf9}.num,.type,.status{color:#738273;font-size:11px;text-transform:uppercase;letter-spacing:.08em}.thought h3{margin:0;font-size:24px;font-weight:400;line-height:1.45}.method-grid{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line);border-radius:24px;overflow:hidden}.step{min-height:270px;padding:28px 24px;display:flex;flex-direction:column;justify-content:space-between;border-left:1px solid var(--line)}.step:first-child{border-left:0}.step h3{margin:0 0 10px;font-size:19px;font-weight:500}.step p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}.about{display:grid;grid-template-columns:1fr 1.4fr;gap:90px;align-items:end}.big{margin:0;font-size:clamp(150px,21vw,280px);font-weight:400;line-height:.7;letter-spacing:-.1em}.years{margin:34px 0 0;color:#738273;font-size:11px;text-transform:uppercase;letter-spacing:.14em}.about-copy{margin:0;font-size:clamp(25px,3vw,38px);line-height:1.6;letter-spacing:-.03em}.footer{padding:115px 0 42px;background:#1c2e1e;color:#fff}.footer-grid{display:grid;grid-template-columns:5fr 7fr;gap:80px}.footer h2{margin-bottom:30px;font-size:clamp(44px,6vw,78px)}.footer p{max-width:500px;color:rgba(255,255,255,.65);line-height:1.7}.footer-links{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}.footer-links h3{margin:0 0 18px;font-size:12px;text-transform:uppercase;letter-spacing:.1em}.footer-links a,.footer-links span{display:block;margin:10px 0;color:rgba(255,255,255,.65);font-size:13px}.footer-bottom{margin-top:75px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);display:flex;justify-content:space-between;color:rgba(255,255,255,.45);font-size:10px;text-transform:uppercase;letter-spacing:.12em}
+    @media(max-width:1023px){.header{padding:16px 20px}.hero{display:flex}.hero-layer{order:1;min-height:auto;background:#fff}.hero-main{padding:130px 24px 48px}.hero-content{width:100%}.video-wrap{position:relative;order:2;width:100%;aspect-ratio:16/9}.headline{min-height:0}.section{padding:100px 0}.method-grid{grid-template-columns:1fr}.step{min-height:auto;border-left:0;border-top:1px solid var(--line);gap:45px}.step:first-child{border-top:0}.footer-grid{grid-template-columns:1fr;gap:60px}}
+    @media(max-width:767px){.container{width:min(calc(100% - 32px),var(--max))}.header{grid-template-columns:1fr auto}.logo{font-size:21px}.asterisk{font-size:25px}.nav,.contact-link{display:none}.menu{display:block}.mobile-nav{display:flex}.hero-main{padding:112px 20px 38px}.headline{font-size:48px;min-height:105px}.description{font-size:18px;margin-bottom:42px}.video-wrap{aspect-ratio:1/1}.section-head{grid-template-columns:1fr;gap:16px}.thought{grid-template-columns:40px 1fr}.type{display:none}.status{grid-column:2}.about{grid-template-columns:1fr;gap:55px}.footer-links{grid-template-columns:1fr;gap:30px}.footer-bottom{flex-direction:column;gap:12px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="#home"><span>李立浩<sup>®</sup></span><span class="asterisk">✱</span></a>
+    <nav class="nav" aria-label="主导航"><a href="#thinking">思考</a><span class="divider">,&nbsp;</span><a href="#method">方法</a><span class="divider">,&nbsp;</span><a href="#about">关于</a><span class="divider">,&nbsp;</span><a href="#contact">合作</a></nav>
+    <a class="contact-link" href="#contact">联系我</a>
+    <button class="menu" aria-label="打开菜单" aria-expanded="false"><span></span><span></span><span></span></button>
+  </header>
+  <div class="mobile-nav"><div><a href="#thinking">思考</a><a href="#method">方法</a><a href="#about">关于</a><a href="#contact">联系我</a></div></div>
+
+  <section class="hero" id="home">
+    <div class="video-wrap"><video id="heroVideo" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260601_110537_3a579fa0-7bbc-4d94-9d25-0e816c7840f5.mp4" muted playsinline preload="auto"></video></div>
+    <div class="hero-layer"><main class="hero-main" id="spade-hero"><div class="hero-content">
+      <div class="drop"><h1 class="headline"><span id="typed"></span><span class="cursor animate-blink" id="cursor"></span></h1></div>
+      <div class="drop delay"><p class="description">我是李立浩，一名 AI 产品经理。<br>持续拆解产品逻辑、真实需求与商业机会。</p></div>
+      <div class="drop delay"><h2 class="service-title">你想和我聊什么？</h2><p class="service-subtitle">可以多选</p>
+        <div class="pills"><button class="pill" data-service="AI 产品"><span class="check">✓</span>AI 产品</button><button class="pill" data-service="产品咨询"><span class="check">✓</span>产品咨询</button><button class="pill" data-service="合作共创"><span class="check">✓</span>合作共创</button><button class="pill" data-service="同行交流"><span class="check">✓</span>同行交流</button></div>
+        <div class="feedback"><p class="placeholder" id="placeholder">请点击上方标签选择交流方向。</p><div class="ready" id="ready"><span id="readyText"></span><button type="button" id="goButton">开始聊聊 →</button></div></div>
+      </div>
+    </div></main></div>
+  </section>
+
+  <section class="section" id="thinking"><div class="container reveal"><div class="section-head"><p class="kicker">Thinking & Analysis</p><h2>我如何理解<br>AI 产品</h2></div><div class="thoughts">
+    <article class="thought"><span class="num">01</span><span class="type">产品拆解</span><h3>什么样的 AI 功能，才能成为用户持续使用的产品？</h3><span class="status">正在整理</span></article>
+    <article class="thought"><span class="num">02</span><span class="type">问题推演</span><h3>如果从零设计一款 AI 产品，我会先验证什么？</h3><span class="status">正在整理</span></article>
+    <article class="thought"><span class="num">03</span><span class="type">行业判断</span><h3>AI 产品的差异，最终不只来自模型能力。</h3><span class="status">正在整理</span></article>
+  </div></div></section>
+
+  <section class="section" id="method"><div class="container reveal"><div class="section-head"><p class="kicker">Product Method</p><h2>从技术可能性，<br>到真实用户价值</h2></div><div class="method-grid">
+    <article class="step"><span class="num">01</span><div><h3>识别问题</h3><p>先寻找值得解决的真实问题，而不是从技术能力倒推需求。</p></div></article><article class="step"><span class="num">02</span><div><h3>判断必要</h3><p>确认 AI 是否能带来传统方案无法提供的新价值。</p></div></article><article class="step"><span class="num">03</span><div><h3>设计协作</h3><p>明确用户、产品与模型各自承担什么，降低使用门槛。</p></div></article><article class="step"><span class="num">04</span><div><h3>快速验证</h3><p>用最小成本验证需求、体验与持续使用的可能性。</p></div></article><article class="step"><span class="num">05</span><div><h3>持续迭代</h3><p>根据真实反馈调整产品，让模型能力转化为长期价值。</p></div></article>
+  </div></div></section>
+
+  <section class="section" id="about"><div class="container reveal"><div class="section-head"><p class="kicker">About Li Lihao</p><h2>三年，持续站在<br>AI 产品一线</h2></div><div class="about"><div><p class="big">03</p><p class="years">Years in AI Product</p></div><p class="about-copy">我是李立浩，目前是一名 AI 产品经理。过去三年，我持续关注模型能力如何转化为真实、可用、能够长期创造价值的产品。</p></div></div></section>
+
+  <footer class="footer" id="contact"><div class="container reveal"><div class="footer-grid"><div><p class="kicker" style="color:rgba(255,255,255,.5)">Get in touch</p><h2>有值得讨论的<br>AI 产品问题？</h2><p>如果你正在探索 AI 产品、寻找产品合作者，或者只是想交换一个有意思的判断，欢迎找我聊聊。</p></div><div class="footer-links"><div><h3>探索</h3><a href="#thinking">思考与拆解</a><a href="#method">产品方法</a></div><div><h3>关于</h3><a href="#about">关于李立浩</a><a href="#about">三年实践</a></div><div><h3>联系</h3><span>微信待补充</span><span>邮箱待补充</span></div></div></div><div class="footer-bottom"><span>© 2026 Li Lihao</span><span>AI Product Manager</span></div></div></footer>
+
+  <script>
+    (function(){
+      var menu=document.querySelector('.menu'),overlay=document.querySelector('.mobile-nav');
+      function closeMenu(){menu.classList.remove('open');overlay.classList.remove('open');menu.setAttribute('aria-expanded','false')}
+      menu.addEventListener('click',function(){var open=!menu.classList.contains('open');menu.classList.toggle('open',open);overlay.classList.toggle('open',open);menu.setAttribute('aria-expanded',String(open))});
+      overlay.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeMenu)});
+
+      var text='把 AI 能力\n做成可用产品的人',typed=document.getElementById('typed'),cursor=document.getElementById('cursor'),index=0;
+      setTimeout(function(){var timer=setInterval(function(){index++;typed.textContent=text.slice(0,index);if(index>=text.length){clearInterval(timer);cursor.style.display='none'}},38)},600);
+
+      var selected=[],pills=document.querySelectorAll('.pill'),placeholder=document.getElementById('placeholder'),ready=document.getElementById('ready'),readyText=document.getElementById('readyText');
+      pills.forEach(function(pill){pill.addEventListener('click',function(){var value=pill.dataset.service,pos=selected.indexOf(value);if(pos>-1)selected.splice(pos,1);else selected.push(value);pill.classList.toggle('active',selected.indexOf(value)>-1);placeholder.style.display=selected.length?'none':'block';ready.classList.toggle('show',selected.length>0);readyText.textContent=selected.length?'准备交流：'+selected.join('、'):''})});
+      document.getElementById('goButton').addEventListener('click',function(){document.getElementById('contact').scrollIntoView({behavior:'smooth'})});
+
+      var video=document.getElementById('heroVideo'),previousX=null,target=0,seeking=false;
+      function desktopScrub(e){if(window.innerWidth<1024||!video.duration)return;if(previousX===null){previousX=e.clientX;return}var delta=e.clientX-previousX;previousX=e.clientX;target=Math.max(0,Math.min(video.duration,target+(delta/window.innerWidth)*.8*video.duration));if(!seeking){seeking=true;video.currentTime=target}}
+      video.addEventListener('loadedmetadata',function(){target=video.currentTime;if(window.innerWidth<1024){video.autoplay=true;video.play().catch(function(){})}});
+      video.addEventListener('seeked',function(){seeking=false;if(window.innerWidth>=1024&&Math.abs(video.currentTime-target)>.02){seeking=true;video.currentTime=target}});
+      window.addEventListener('mousemove',desktopScrub,{passive:true});
+      window.addEventListener('resize',function(){previousX=null;if(window.innerWidth<1024)video.play().catch(function(){});else video.pause()});
+
+      var items=document.querySelectorAll('.reveal');if('IntersectionObserver'in window){var observer=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}})},{threshold:.12});items.forEach(function(item){observer.observe(item)})}else items.forEach(function(item){item.classList.add('visible')});
+    })();
+  </script>
+</body>
+</html>
