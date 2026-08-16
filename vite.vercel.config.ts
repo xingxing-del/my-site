@@ -1,14 +1,12 @@
 /**
- * Vercel 部署专用 Vite 配置（不影响本地开发与 Cloudflare 构建）。
- * 依据 vinext 文档：vinext + Nitro 可部署到 Vercel，
- * 构建命令：NITRO_PRESET=vercel npx vite build --config vite.vercel.config.ts
- * 输出目录：.output
+ * Vercel 部署专用 Vite 配置（纯静态导出，不依赖服务器函数，最可靠）。
+ * 构建命令：STATIC_EXPORT=1 vite build --config vite.vercel.config.ts
+ * 输出目录：dist/client（生成的 *.html 静态页面）
  */
 import { defineConfig } from "vite";
 import vinext from "vinext";
-import { nitro } from "nitro/vite";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-  plugins: [vinext(), nitro(), tailwindcss()],
+  plugins: [vinext(), tailwindcss()],
 });

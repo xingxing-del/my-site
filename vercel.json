@@ -1,5 +1,10 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "vite build --config vite.vercel.config.ts",
-  "outputDirectory": ".vercel/output"
+  "buildCommand": "STATIC_EXPORT=1 vinext build",
+  "outputDirectory": "dist/client",
+  "routes": [
+    { "src": "/articles/([^/]+)\\.rsc", "dest": "/articles/$1.rsc" },
+    { "src": "/articles/([^/]+)", "dest": "/articles/$1.html" },
+    { "src": "/articles", "dest": "/articles.html" }
+  ]
 }
