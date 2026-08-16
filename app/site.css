@@ -170,6 +170,11 @@ a {
   isolation: isolate;
   font-family: Inter, "PingFang SC", "Microsoft YaHei", sans-serif;
 }
+/* 首页顶栏悬浮于上方，不占文档流，保证内容区对齐整页中线 */
+.home-page .header {
+  position: absolute;
+  inset: 0 0 auto;
+}
 .robot-stage {
   position: absolute;
   z-index: auto;
@@ -206,14 +211,14 @@ a {
   width: min(92vw, 1280px);
   height: 100%;
   margin: auto;
-  padding: clamp(88px, 11vh, 124px) 0 clamp(24px, 4vh, 46px);
+  /* 上下内边距对称，文字块垂直居中于整页中线 */
+  padding: clamp(60px, 8vh, 92px) 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 .copy {
   width: min(620px, 53vw);
-  margin-top: -1vh;
 }
 .copy h1 {
   margin: 0 0 clamp(16px, 2.6vh, 28px);
