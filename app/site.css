@@ -1,5 +1,11 @@
 /* 全站共用样式：沿用主页（index.html）的深色太空风格，不改变整体设计语言 */
 
+html,
+body {
+  font-family: Inter, "PingFang SC", "Microsoft YaHei", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
 :root {
   --white: #f6f8fb;
   --muted: rgba(235, 241, 247, 0.64);
@@ -162,6 +168,7 @@ a {
   min-height: 560px;
   overflow: hidden;
   isolation: isolate;
+  font-family: Inter, "PingFang SC", "Microsoft YaHei", sans-serif;
 }
 .robot-stage {
   position: absolute;
